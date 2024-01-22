@@ -10,8 +10,8 @@ const logSlice = createSlice({
   name: 'login',
   initialState,
   reducers:{
-    setLogin:(state,payload)=>{
-        state = !initialState.login
+    setLogin:(state)=>{
+        state.login = !state.login
     }
   }
 })

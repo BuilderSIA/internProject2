@@ -1,5 +1,10 @@
+import { useDispatch } from "react-redux";
+import { setLogin } from "../features/logSlice";
 
 function Navbar() {
+  const dispatch = useDispatch()
+  
+
     return (
         <form className="justify-between items-center bg-blue-500 flex gap-5 px-10 py-2 max-md:flex-wrap max-md:px-5">
       <div className="flex justify-between gap-5 my-auto items-start max-md:max-w-full max-md:flex-wrap">
@@ -40,7 +45,7 @@ function Navbar() {
         >
           <option value="russian">русский</option>
         </select>
-        <button className="text-cyan-800 text-lg font-medium leading-5 whitespace-nowrap justify-center items-stretch bg-white grow px-5 py-5 rounded-2xl" type="button">
+        <button onClick={()=>dispatch(setLogin())} className="text-cyan-800 text-lg font-medium leading-5 whitespace-nowrap justify-center items-stretch bg-white grow px-5 py-5 rounded-2xl" type="button">
           Войти
         </button>
         <button className="text-zinc-900 text-lg font-medium leading-5 whitespace-nowrap justify-center items-stretch bg-amber-400 grow px-5 py-4 rounded-2xl" type="button">

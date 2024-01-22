@@ -6,6 +6,7 @@ import TryCourse from './components/TryCourse';
 import AllCourses from './components/AllCourses';
 import { useSelector } from 'react-redux';
 import './App.css';
+import MainPage from './components/MainPage';
 
 
 function App() {
@@ -16,12 +17,7 @@ function App() {
   return (
     <>
       <Navbar/>
-      <Hero/>
-      <Tutors/>
-      <Plans/>
-      <TryCourse/>
-      <AllCourses/>
-
+      {login?<MainPage/>:null}
     </>
   )
 }
