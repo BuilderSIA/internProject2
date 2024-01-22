@@ -1,23 +1,28 @@
-
-import { useSelector } from 'react-redux'
-import './App.css'
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Tutors from './components/Tutors';
+import Plans from './components/Plans';
+import TryCourse from './components/TryCourse';
+import AllCourses from './components/AllCourses';
+import { useSelector } from 'react-redux';
+import './App.css';
 
 
 function App() {
-
 
   const {login} = useSelector((state)=>state.login)
 
 
   return (
-    <div>
-      <h2>
-        {login? 'Hello world!!!':null}
-      </h2>
-      <button>
-        Login
-      </button>
-    </div>
+    <>
+      <Navbar/>
+      <Hero/>
+      <Tutors/>
+      <Plans/>
+      <TryCourse/>
+      <AllCourses/>
+
+    </>
   )
 }
 
